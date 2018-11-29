@@ -1,0 +1,19 @@
+
+Poniższe metody (publiczne i statyczne) proszę umieścić w klasie ArrayUtils.
+1. Napisz metodę print, która wypisze w konsoli elementy tablicy intów, przekazanej jako parametr.
+2. Napisz metodę getMax, która przyjmie za parametr tablicę intów, a która zwróci największą wartość z tej tablicy.
+3. Napisz metode getMin, która zwróci najmniejszy element przekazanej tablicy intów.
+4. Napisz metodę getSum, która przyjmie za parametr tablicę intów, a któa zwróci sumę jej elementów.
+5. Napisz metodę getMaxMinAndSum, która przyjmie za parametr tablicę intów, a która zwróci tablicę trzyelementową, której pierwszy element to wartość największa, drugi to najmniejsza, a trzeci suma wszystkich elementów.
+6. Napisz metodę getLarger, która przyjmie za parametry dwie tablice intów, a która zwróci tę tablicę, której suma elementów jest większa.
+7. Napisz metodę merge, która za parametry dwie tablice intów, a która zwróci tablicę, która zawierać będzie wszystkie elementy z jednej i drugiej tablicy.
+8. Napisz metodę getDistinct, która za parametr przyjmie tablicę, a która zwróci tablicę, w której będą elementy bez powtórzeń z tablicy przekazanej w parametrze.
+
+Poniższe metody (publiczne i statyczne) proszę umieścić w klasie StringUtils.
+1. Napisz funkcję containsChar, która przyjmie za parametry łańcuch znaków oraz znak (char), a która zwróci odpowiedź, czy łańcuch znaków zawiera znak.
+2. Napisz funkcję reverse, która przyjmie jako parametr łańcuch znaków, a która zwróci ten łańcuch znaków czytany od końca.
+3. Napisz funkcję differentCharCount, która przyjmie za parametr łańcuch znaków, a która zwróci informację o tym, ile różnych znaków mamy w łańcuchu.
+4. Napisz funkcję contains, która przyjmie za parametry dwa łańcuchy znaków, a która sprawdzi, czy pierwszy zawiera drugi.
+
+Poniższe metody (publiczne i statyczne) proszę umieścić w klasie ArithmeticUtils.
+1. Napisz funkcję getPrimes, która zwróci liczby pierwsze mniejsze od przekazanej w parametrze wartości, przy użyciu Sita Eratostenesa
