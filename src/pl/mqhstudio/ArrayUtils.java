@@ -64,4 +64,32 @@ public class ArrayUtils {
         }
         return mergedTab;
     }
+
+    public static boolean doesExist(int[] tab, int element) {
+        for(int i:tab) {
+            if(i == element) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int[] extendArray(int[] tab, int element) {
+        int[] newTab = new int[tab.length + 1];
+        for(int i = 0; i < tab.length; i++) {
+            newTab[i] = tab[i];
+        }
+        newTab[newTab.length - 1] = element;
+        return newTab;
+    }
+
+    public static int[] getDistinct(int[] tab) {
+        int[] result = new int[0];
+        for(int i = 0; i < tab.length; i++) {
+            if(!doesExist(result, tab[i])) {
+                result = extendArray(result, tab[i]);
+            }
+        }
+        return result;
+    }
 }
