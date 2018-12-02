@@ -22,6 +22,7 @@ public class FirstApp extends Application {
 
         Button btn1 = new Button("Guzik 1");
         Button btn2 = new Button("Guzik 2");
+        btn2.setId("button2");
 
         TextField textField1 = new TextField("Pole tekstowe 1");
         TextField textField2 = new TextField("Pole tekstowe 2");
