@@ -36,7 +36,7 @@ public class Main {
     public static void removeTask(int indexTask) {
         boolean isTaskExist = indexTask < tasksCount;
         if(isTaskExist) {
-            for()
+            //for()
         }
     }
 }
