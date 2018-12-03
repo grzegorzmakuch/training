@@ -1,5 +1,7 @@
 package Todolist;
 
+import java.util.Scanner;
+
 public class Main {
 
     static String[] tasks = new String[100];
@@ -9,10 +11,6 @@ public class Main {
     static int tasksCount = 0;
     static int projectsCount = 0;
     static int changeLogCount = 0;
-
-    public static void main(String[] args) {
-
-    }
 
     public static void displayMenu() {
         System.out.println("1 - Create new task");
@@ -36,7 +34,49 @@ public class Main {
     public static void removeTask(int indexTask) {
         boolean isTaskExist = indexTask < tasksCount;
         if(isTaskExist) {
-            //for()
+            for(int i = indexTask; i < tasksCount - 1; i++) {
+                tasks[i] = tasks[i + 1];
+            }
+            tasksCount--;
+        }
+    }
+
+    public static void displayTasks() {
+        System.out.println("List of tasks: ");
+        for(int i = 0; i < tasksCount; i++) {
+            System.out.println(tasks[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int radix;
+        boolean isApplicationRun = true;
+        while(isApplicationRun) {
+            displayMenu();
+            radix = scanner.nextInt();
+
+            switch(radix) {
+                case 1:
+                    System.out.println("Podaj nazwe zadania do dodania: ");
+                    String task = scanner.next();
+                    addTask(task);
+                    break;
+                case 2:
+                    System.out.println("Podaj numer zadania do usuniecia" );
+                    int index = scanner.nextInt();
+                    removeTask(index);
+                    break;
+                case 5:
+                    displayTasks();
+                    break;
+                case 0:
+                    isApplicationRun = false;
+                    break;
+                default:
+                    System.out.println("Nie ma takiej opcji");
+                    break;
+            }
         }
     }
 }
