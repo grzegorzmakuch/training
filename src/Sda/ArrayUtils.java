@@ -1,4 +1,4 @@
-package pl.mqhstudio;
+package Sda;
 
 public class ArrayUtils {
 
