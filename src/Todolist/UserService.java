@@ -10,13 +10,21 @@ public class UserService {
         users[3] = new User("user3", "haslotrzy", "user3@mqh.pl", 12);
     }
 
-    public User getUserByLogin(String login) {
-        for(User user: users) {
-            boolean isSameLogin = user.login.equals(login);
+   public User getUserByLogin(String searchingLogin) {
+        for(User searchingUser : users) {
+            boolean isSameLogin = searchingUser.login.equals(searchingLogin);
             if(isSameLogin) {
-                return user;
+                return searchingUser;
             }
         }
         return null;
-    }
+   }
+
+   public int getUserAge() {
+        int sum = 0;
+        for(User user : users) {
+            sum += user.age;
+        }
+        return sum;
+   }
 }
