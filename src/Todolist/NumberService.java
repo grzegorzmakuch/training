@@ -47,5 +47,20 @@ public class NumberService {
         System.out.println();
     }
 
-    //todo: dopisac sortownaie babelkowe
+    public void sortNumbers() {
+        for(int i = 0; i < numbers.length; i++) {
+            for(int j = 0; j < numbers.length; j++) {
+                boolean sameNumbers = i == j;
+                if(sameNumbers) {
+                    continue;
+                }
+                boolean numberIsHigher = numbers[i] < numbers[j];
+                if(numberIsHigher) {
+                    int tempNumber = numbers[j];
+                    numbers[j] = numbers[i];
+                    numbers[i] = tempNumber;
+                }
+            }
+        }
+    }
 }

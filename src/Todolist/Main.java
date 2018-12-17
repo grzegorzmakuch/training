@@ -23,5 +23,7 @@ public class Main {
         System.out.println("Suma wszystkich liczb w tablicy : " + sumNumbers);
 
         numberService.displayNumbers();
+        numberService.sortNumbers();
+        numberService.displayNumbers();
     }
 }
