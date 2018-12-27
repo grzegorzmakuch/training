@@ -1,5 +1,0 @@
-Poniższe metody (publiczne i statyczne) proszę umieścić w klasie StringUtils.
-1. Napisz funkcję containsChar, która przyjmie za parametry łańcuch znaków oraz znak (char), a która zwróci odpowiedź, czy łańcuch znaków zawiera znak.
-2. Napisz funkcję reverse, która przyjmie jako parametr łańcuch znaków, a która zwróci ten łańcuch znaków czytany od końca.
-3. Napisz funkcję differentCharCount, która przyjmie za parametr łańcuch znaków, a która zwróci informację o tym, ile różnych znaków mamy w łańcuchu.
-4. Napisz funkcję contains, która przyjmie za parametry dwa łańcuchy znaków, a która sprawdzi, czy pierwszy zawiera drugi.
