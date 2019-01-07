@@ -5,7 +5,10 @@ public class Main {
     public static final String INVALID_VALUE_MESSAGE = "Invalid value";
 
     public static void main(String[] args) {
-        System.out.println(sumFirstAndLastDigit(10));
+        System.out.println(isPerfectNumber(6));
+        System.out.println(isPerfectNumber(28));
+        System.out.println(isPerfectNumber(44));
+        System.out.println(isPerfectNumber(-6));
     }
 
     private static String getDurationString(int minutes, int seconds) {
@@ -168,5 +171,111 @@ public class Main {
         }
         int firstDigit = number;
         return firstDigit + lastDigit;
+    }
+
+    public static int getEvenDigitSum(int number) {
+        if(number < 0) {
+            return -1;
+        }
+        int sum = 0;
+        int evenNumber = 0;
+        while(number > 0) {
+            evenNumber = number % 10;
+            if(evenNumber % 2 == 0) {
+                sum += evenNumber;
+            }
+            number /= 10;
+        }
+        return sum;
+    }
+
+    public static boolean hasSharedDigit(int a, int b) {
+        if((a < 10 || a > 99 || b < 10 || b > 99)) {
+            return false;
+        } else if (a % 10 == b % 10 || a % 10 == b / 10 || a / 10 == b % 10 || a / 10 == b / 10) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean hasSharedDigitVersionTwo(int a, int b) {
+        if(a < 10 || a > 99 || b < 10 || b > 99) {
+            return false;
+        }
+        int tempFirst;
+        int tempSecond;
+        while(a > 0) {
+            tempFirst = a % 10;
+            while(b > 10) {
+                tempSecond = b % 10;
+                if(tempSecond == tempFirst) {
+                    return true;
+                }
+                b /= 10;
+            }
+            a /= 10;
+        }
+        return false;
+    }
+
+    public static boolean hasSameLastDigit(int a, int b, int c) {
+        if(a < 10 || a > 1000 || b < 10 || b > 1000 || c < 10 || c > 1000) {
+            return false;
+        } else if(a % 10 == b % 10 || b % 10 == c % 10 || c % 10 == a % 10) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static int getGreatestCommonDividerVersionAnd(int a, int b) {
+        if(a < 10 || b < 10) {
+            return -1;
+        }
+        int gcd = 0;
+        for(int i = 1; i <= a && i <= b; i++) {
+            if(a % i == 0 && b % i == 0) {
+                gcd = i;
+            }
+        }
+        return gcd;
+    }
+
+    public static int getGreatestCommonDividerVersionOr(int a, int b) {
+        if(a < 10 || b < 10) {
+            return -1;
+        }
+        int gcd = 0;
+        for(int i = 1; i <= a || i <= b; i++) {
+            if(a % i == 0 && b % i == 0) {
+                gcd = i;
+            }
+        }
+        return gcd;
+    }
+
+    public static void printFactors(int number) {
+        if(number < 1) {
+            System.out.println("Invalid value");
+        }
+        for(int i = 1; i <=number; i++) {
+            if(number % i == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static boolean isPerfectNumber(int number) {
+        if(number < 1) {
+            return false;
+        }
+        int sum = 0;
+        for(int i = 1; i < number; i++) {
+            if(number % i == 0) {
+                sum += i;
+            }
+        }
+        return(sum == number);
     }
 }
